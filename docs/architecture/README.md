@@ -12,7 +12,7 @@ WagMeal アプリのアーキテクチャを GitHub 上で可視化するため�
 ## 1. View → ViewModel
 
 ```mermaid
-<<<flowchart TB
+flowchart TB
   %% Views
   AllEvaluationsView
   CropAvatarView
@@ -99,7 +99,7 @@ WagMeal アプリのアーキテクチャを GitHub 上で可視化するため�
   UserProfileView --> AuthViewModel
   Wrapper --> DogFoodViewModel
   Wrapper --> DogProfileViewModel
-  classDef vm fill:#eef,stroke:#88f;>>>
+  classDef vm fill:#eef,stroke:#88f;
 ```
 
 ---
@@ -107,7 +107,7 @@ WagMeal アプリのアーキテクチャを GitHub 上で可視化するため�
 ## 2. Firebase を直接触っているファイル
 
 ```mermaid
-<<<flowchart TB
+flowchart TB
   %% Views
   AllEvaluationsView
   CropAvatarView
@@ -194,7 +194,7 @@ WagMeal アプリのアーキテクチャを GitHub 上で可視化するため�
   UserProfileView --> AuthViewModel
   Wrapper --> DogFoodViewModel
   Wrapper --> DogProfileViewModel
-  classDef vm fill:#eef,stroke:#88f;>>>
+  classDef vm fill:#eef,stroke:#88f;
 ```
 
 ---
@@ -202,7 +202,7 @@ WagMeal アプリのアーキテクチャを GitHub 上で可視化するため�
 ## 3. ViewModel → Firestore Collections
 
 ```mermaid
-<<<flowchart LR
+flowchart LR
   subgraph Firestore
     dogfood(("dogfood"))
     dogs(("dogs"))
@@ -225,7 +225,7 @@ WagMeal アプリのアーキテクチャを GitHub 上で可視化するため�
   FavoritesViewModel --> users
   KeyboardObserver --> evaluations
   RankingViewModel --> dogfood
-  RankingViewModel --> evaluations>>>
+  RankingViewModel --> evaluations
 ```
 
 ---
