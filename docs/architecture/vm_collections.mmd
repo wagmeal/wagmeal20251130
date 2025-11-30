@@ -1,0 +1,24 @@
+flowchart LR
+  subgraph Firestore
+    dogfood(("dogfood"))
+    dogs(("dogs"))
+    evaluations(("evaluations"))
+    favorites(("favorites"))
+    users(("users"))
+  end
+  AuthViewModel --> users
+  DogFoodViewModel --> dogfood
+  DogFoodViewModel --> evaluations
+  DogFoodViewModel --> favorites
+  DogFoodViewModel --> users
+  DogFormState --> dogs
+  DogFormState --> users
+  DogProfileViewModel --> dogs
+  DogProfileViewModel --> users
+  EvaluationViewModel --> evaluations
+  FavoritesViewModel --> dogfood
+  FavoritesViewModel --> favorites
+  FavoritesViewModel --> users
+  KeyboardObserver --> evaluations
+  RankingViewModel --> dogfood
+  RankingViewModel --> evaluations

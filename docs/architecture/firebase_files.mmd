@@ -1,0 +1,57 @@
+flowchart TB
+  subgraph Firebase
+    Firestore[(Firestore)]
+    Storage[(Storage)]
+    Auth[(Auth)]
+  end
+  Dogfood_DogFood_swift["Dogfood/DogFood.swift"]
+  Dogfood_DogFood_swift --> Firestore
+  Dogfood_DogProfile_DogDetailView_swift["Dogfood/DogProfile/DogDetailView.swift"]
+  Dogfood_DogProfile_DogDetailView_swift --> Firestore
+  Dogfood_DogProfile_DogDetailView_swift --> Storage
+  Dogfood_DogProfile_DogFormView_swift["Dogfood/DogProfile/DogFormView.swift"]
+  Dogfood_DogProfile_DogFormView_swift --> Firestore
+  Dogfood_DogProfile_DogFormView_swift --> Storage
+  Dogfood_DogProfile_DogFormView_swift --> Auth
+  Dogfood_DogProfile_DogProfile_swift["Dogfood/DogProfile/DogProfile.swift"]
+  Dogfood_DogProfile_DogProfile_swift --> Firestore
+  Dogfood_DogProfile_DogProfileViewModel_swift["Dogfood/DogProfile/DogProfileViewModel.swift"]
+  Dogfood_DogProfile_DogProfileViewModel_swift --> Firestore
+  Dogfood_DogProfile_DogProfileViewModel_swift --> Auth
+  Dogfood_DogProfile_EvaluationDetailView_swift["Dogfood/DogProfile/EvaluationDetailView.swift"]
+  Dogfood_DogProfile_EvaluationDetailView_swift --> Firestore
+  Dogfood_Evaluation_swift["Dogfood/Evaluation.swift"]
+  Dogfood_Evaluation_swift --> Firestore
+  Dogfood_Favorites_FavoritesView_swift["Dogfood/Favorites/FavoritesView.swift"]
+  Dogfood_Favorites_FavoritesView_swift --> Firestore
+  Dogfood_Favorites_FavoritesView_swift --> Auth
+  Dogfood_Favorites_FavoritesViewModel_swift["Dogfood/Favorites/FavoritesViewModel.swift"]
+  Dogfood_Favorites_FavoritesViewModel_swift --> Firestore
+  Dogfood_Favorites_FavoritesViewModel_swift --> Auth
+  Dogfood_ImageLoader_swift["Dogfood/ImageLoader.swift"]
+  Dogfood_ImageLoader_swift --> Storage
+  Dogfood_Login_AuthViewModel_swift["Dogfood/Login/AuthViewModel.swift"]
+  Dogfood_Login_AuthViewModel_swift --> Firestore
+  Dogfood_Login_AuthViewModel_swift --> Auth
+  Dogfood_Login_UserProfile_swift["Dogfood/Login/UserProfile.swift"]
+  Dogfood_Login_UserProfile_swift --> Firestore
+  Dogfood_Ranking_RankingViewModel_swift["Dogfood/Ranking/RankingViewModel.swift"]
+  Dogfood_Ranking_RankingViewModel_swift --> Firestore
+  Dogfood_Search_DogFoodPage_AllEvaluationView_swift["Dogfood/Search/DogFoodPage/AllEvaluationView.swift"]
+  Dogfood_Search_DogFoodPage_AllEvaluationView_swift --> Firestore
+  Dogfood_Search_DogFoodPage_AllEvaluationView_swift --> Storage
+  Dogfood_Search_DogFoodPage_DogFoodDetailView_swift["Dogfood/Search/DogFoodPage/DogFoodDetailView.swift"]
+  Dogfood_Search_DogFoodPage_DogFoodDetailView_swift --> Firestore
+  Dogfood_Search_DogFoodPage_DogFoodDetailView_swift --> Auth
+  Dogfood_Search_DogFoodPage_DogFoodDetailView2_swift["Dogfood/Search/DogFoodPage/DogFoodDetailView2.swift"]
+  Dogfood_Search_DogFoodPage_DogFoodDetailView2_swift --> Firestore
+  Dogfood_Search_DogFoodPage_DogFoodDetailView2_swift --> Auth
+  Dogfood_Search_DogFoodPage_EvaluationInputView_swift["Dogfood/Search/DogFoodPage/EvaluationInputView.swift"]
+  Dogfood_Search_DogFoodPage_EvaluationInputView_swift --> Firestore
+  Dogfood_Search_DogFoodPage_EvaluationInputView_swift --> Auth
+  Dogfood_Search_DogFoodViewModel_swift["Dogfood/Search/DogFoodViewModel.swift"]
+  Dogfood_Search_DogFoodViewModel_swift --> Firestore
+  Dogfood_Search_DogFoodViewModel_swift --> Storage
+  Dogfood_Search_DogFoodViewModel_swift --> Auth
+  Dogfood_Search_EvaluationAverage_swift["Dogfood/Search/EvaluationAverage.swift"]
+  Dogfood_Search_EvaluationAverage_swift --> Firestore
